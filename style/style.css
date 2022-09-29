@@ -197,6 +197,11 @@ th[scope="col"] {
     color: #fff;
 }
 
+th[scope="colmedia"] {
+    background-color: black;
+    color: #fff;
+}
+
 th[scope="row"] {
     background-color: #d7d9f2;
 }
