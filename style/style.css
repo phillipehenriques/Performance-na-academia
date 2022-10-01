@@ -179,7 +179,7 @@ nav {
 
 td,
 th {
-    border: 1px solid rgb(190, 190, 190);
+    border: 1px solid black;
     padding: 10px;
 }
 
@@ -213,7 +213,7 @@ caption {
 
 table {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    border: 2px solid black;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
