@@ -127,7 +127,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 5px;
-    background-color: var(--cor02);
+    background-color: var(--cor10);
     width: 60%;
     max-width: 1200px;
     min-width: 500px;
@@ -145,13 +145,13 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 980px;
     min-width: 100px;
     height: 47vh;
     gap: 1%;
-    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .columnItens {
@@ -217,4 +217,42 @@ table {
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
+    width: 75%;
+}
+
+.tituloColuna {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #FFF;
+    width: 100%;
+    height: 50px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.celulaColuna {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(221, 221, 221);
+    width: 100%;
+    height: 50px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    width: 200px;
+    height: 91%;
+    border-collapse: collapse;
+    border: 1px solid black;
 }

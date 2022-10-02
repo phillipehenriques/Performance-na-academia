@@ -12,3 +12,18 @@ function createTable() {
 }
 
 createTable()
+
+function addResult() {
+    var resultados = document.getElementById('result')[0]
+    var coluna = document.createElement('row')
+
+    for (var linha = 0; linha < 11; linha++) {
+        var criarLinha = document.createElement('tr')
+    }
+}
+
+    addResult()
+
+function addPage() {
+    
+}
