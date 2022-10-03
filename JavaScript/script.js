@@ -1,3 +1,5 @@
+
+
 function createTable() {
 
     var cabecalhosDaTabela = ['Mês', 'IMC', 'Massa gorda', 'Massa magra', 'Ossos', 'Resíduos', 'Músculos', 'Água (%)', 'Taxa Metab.', 'Idade Metab.', 'Gordura Visc.']
@@ -21,15 +23,16 @@ function createTable() {
     populateTable();
 }
 
-createTable();
+createTable(); // < cabecalhosDaTabela porque não da pra colocar aqui ?????????????????????????????
 
 // Chamado toda vez que a página é carregada e quando uma nova linha é adicionda
-function populateTable() {
+function populateTable(cabecalhosDaTabela) {
     var tabela = document.getElementById('tabeladeexercicios');
     var row = document.createElement('tr');
 
     for (var linha = 0; linha < cabecalhosDaTabela.length; linha++) {
         var tableRow = document.createElement('tr')
+        tr.innerHTML = cabecalhosDaTabela[index]
         tableRow.setAttribute('class', 'celulaColuna')
 
         th.appendChild(tr)
