@@ -30,18 +30,20 @@ function populateTable() {
 
     for (var linha = 0; linha < cabecalhosDaTabela.length; linha++) {
         var tableRow = document.createElement('tr')
-
-        tr.setAttribute('class', 'celulaColuna')
+        tableRow.setAttribute('class', 'celulaColuna')
 
         th.appendChild(tr)
     }
 }
+
+populateTable()
 
 //TODO: lição de casa
 // Chamada cada vez que o botão "adicionar" é acionado
 function createRow() {
     // Procura documento de texto existente
     // Se não existir, cria ele
+    var dadosDoExame = []
     //Se existir, adiciona novos dados ao documento
     // Chama a função populateTable()
     populateTable()
@@ -56,3 +58,4 @@ function createRow() {
         </thead>
     </table>
 </div> */}
+
