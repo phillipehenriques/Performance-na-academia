@@ -24,7 +24,18 @@ function createTable() {
 createTable();
 
 // Chamado toda vez que a página é carregada e quando uma nova linha é adicionda
+function populateTable() {
+    var tabela = document.getElementById('tabeladeexercicios');
+    var row = document.createElement('tr');
 
+    for (var linha = 0; linha < cabecalhosDaTabela.length; linha++) {
+        var tableRow = document.createElement('tr')
+
+        tr.setAttribute('class', 'celulaColuna')
+
+        th.appendChild(tr)
+    }
+}
 
 //TODO: lição de casa
 // Chamada cada vez que o botão "adicionar" é acionado
