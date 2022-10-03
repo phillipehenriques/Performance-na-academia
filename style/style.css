@@ -83,12 +83,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.11);
     width: 60%;
     max-width: 1400px;
     min-width: 360px;
-    height: 800px;
+    height: 860px;
 }
 
 main > p {
@@ -145,7 +145,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     max-width: 980px;
     min-width: 100px;
@@ -173,9 +173,6 @@ nav {
     flex-wrap: wrap;
 }
 
-#h2card {
-    margin-bottom: 5px;
-}
 
 td,
 th {
@@ -192,8 +189,10 @@ tr:nth-child(even) {
     background-color: #eee;
 }
 
-th[scope="col"] {
-    background-color: #696969;
+th {
+    width: 65px;
+    height: 35px;
+    background-color: #b8b8b8;
     color: #fff;
 }
 
@@ -213,7 +212,7 @@ caption {
 
 table {
     border-collapse: collapse;
-    border: 2px solid black;
+    border: 1px solid black;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
@@ -255,4 +254,40 @@ table {
     height: 91%;
     border-collapse: collapse;
     border: 1px solid black;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    width: 100%;
+    max-width: 980px;
+    height: 400px;
+    padding: 10px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 65%;
+    height: 260px;
+    padding: 10px;
+    gap: 6px;
+}
+
+.boxFormulario {
+    width: 150px;
+}
+
+thead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

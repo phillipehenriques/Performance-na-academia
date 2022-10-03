@@ -1,6 +1,6 @@
 function createTable() {
 
-    var cabecalhosDaTabela = ['Mês', 'IMC', 'Massa gorda', 'Massa magra', 'Ossos', 'Resíduos', 'Músculos', 'água (%)', 'Taxa Metab.', 'Idade Metab.', 'Gordura Visc.']
+    var cabecalhosDaTabela = ['Mês', 'IMC', 'Massa gorda', 'Massa magra', 'Ossos', 'Resíduos', 'Músculos', 'Água (%)', 'Taxa Metab.', 'Idade Metab.', 'Gordura Visc.']
 
     var tableContainer = document.getElementById('tableContainer');
     var table = document.createElement('table');
