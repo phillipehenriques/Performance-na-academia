@@ -20,22 +20,38 @@ function createTable() {
     table.appendChild(thead);
     tableContainer.appendChild(table);
 
-    populateTable();
+    populateTable(cabecalhosDaTabela);
 }
 
 createTable(); // < cabecalhosDaTabela porque não da pra colocar aqui ?????????????????????????????
 
+function loadingLog() {
+    var arquivoJson = "";
+
+    fetch('./arquivo.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+    //return arquivoJson;
+}
+
 // Chamado toda vez que a página é carregada e quando uma nova linha é adicionda
 function populateTable(cabecalhosDaTabela) {
     var tabela = document.getElementById('tabeladeexercicios');
-    var row = document.createElement('tr');
 
-    for (var linha = 0; linha < cabecalhosDaTabela.length; linha++) {
-        var tableRow = document.createElement('tr')
-        tr.innerHTML = cabecalhosDaTabela[index]
-        tableRow.setAttribute('class', 'celulaColuna')
+    var documentoDeTexto = leArquivoDeTexto();
 
-        th.appendChild(tr)
+    // Para cada item no arquivo .json, adicionar uma linha com seus respectivos valores
+    for(var linha = 0; linha < documentoDeTexto.length; linha++) { 
+        var row = document.createElement('tr');
+
+        // Criando uma célula para cada coluna no array
+        for (var coluna = 0; coluna < cabecalhosDaTabela.length; coluna++) {
+            var celula = document.createElement('td');
+            // Escrevendo o valor dentro da celula
+            celula.innerHTML = documentoDeTexto[linha][coluna];
+            row.appendChild(celula);
+        }
     }
 }
 
@@ -43,7 +59,7 @@ populateTable()
 
 //TODO: lição de casa
 // Chamada cada vez que o botão "adicionar" é acionado
-function createRow() {
+function salvarLinha() {
     // Procura documento de texto existente
     // Se não existir, cria ele
     var dadosDoExame = []
