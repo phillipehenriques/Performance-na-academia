@@ -25,12 +25,23 @@ function createTable() {
 
 createTable(); // < cabecalhosDaTabela porque não da pra colocar aqui ?????????????????????????????
 
-function loadingLog() {
-    var arquivoJson = "";
+async function loadingLog() {
+    
+    try {
+        const arquivoJson = await fetch ('/arquivo.json')
 
-    fetch('./arquivo.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+        arquivoJson.then((response) => response.json())    
+        arquivoJson.then((response) => {
+        return response.json();
+    })
+    
+    } catch {
+        console.log('Erro ao carregar Json')
+    }
+
+    // import data from '/arquivo.json';
+    // console.log(data);
+
 
     //return arquivoJson;
 }
