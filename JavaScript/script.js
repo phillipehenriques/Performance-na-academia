@@ -34,7 +34,7 @@ async function loadingLog() {
         arquivoJson.then((response) => {
         return response.json();
     })
-    
+
     } catch {
         console.log('Erro ao carregar Json')
     }
@@ -46,11 +46,13 @@ async function loadingLog() {
     //return arquivoJson;
 }
 
+loadingLog()
+
 // Chamado toda vez que a página é carregada e quando uma nova linha é adicionda
 function populateTable(cabecalhosDaTabela) {
     var tabela = document.getElementById('tabeladeexercicios');
 
-    var documentoDeTexto = leArquivoDeTexto();
+    // var documentoDeTexto = leArquivoDeTexto();
 
     // Para cada item no arquivo .json, adicionar uma linha com seus respectivos valores
     for(var linha = 0; linha < documentoDeTexto.length; linha++) { 
@@ -61,23 +63,46 @@ function populateTable(cabecalhosDaTabela) {
             var celula = document.createElement('td');
             // Escrevendo o valor dentro da celula
             celula.innerHTML = documentoDeTexto[linha][coluna];
-            row.appendChild(celula);
+            row.appendChild(celula, cabecalhosDaTabela);
         }
     }
 }
 
-populateTable()
+populateTable(celula, cabecalhosDaTabela)
 
 //TODO: lição de casa
 // Chamada cada vez que o botão "adicionar" é acionado
-function salvarLinha() {
+function salvarLinha(celula) {
+
+        var rowLogs = celula.value;
+
+        // for (var registro = 0; log >= cabecalhosDaTabela.length; )
+
+        if (rowLogs != null) {
+            ('/arquivo.json') = celula.value
+        }
+        else {
+            console.log ('erro ao carregar Json')
+        }
+
+        Array.forEach(element => {
+            celula.innerHTML = element.value
+        });
+
+
+        
+        // TENTANDO SALVAR ARQUIVO <<<<<<<<
+
+        var arquivo = new Blob([userInput], { type: "text/plain;charset=utf-8" });
+        saveAs(blob, "dynamic.txt");
+    }
+
     // Procura documento de texto existente
     // Se não existir, cria ele
-    var dadosDoExame = []
     //Se existir, adiciona novos dados ao documento
     // Chama a função populateTable()
+
     populateTable()
-}
 
 {/* <div id="tableContainer">
     <table>
