@@ -33,7 +33,7 @@
     --cor10: #000;
 
     --font-family: 'Matcha', sans-serif;
-    --font-family: 'Montserrat', sans-serif;
+    --font-Mon: 'Montserrat', sans-serif;
     --font-family: 'Edu TAS Beginner', sans-serif, cursive;
     --font-family: 'Hind', sans-serif;
 }
@@ -140,6 +140,7 @@ nav {
     height: 6vh;
     font-size: 0.9rem;
     margin-bottom: 1.5vh;
+    font-family: var(--font-Mon);
 }
 
 .container {
